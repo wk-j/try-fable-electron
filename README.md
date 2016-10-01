@@ -4,8 +4,8 @@
 
 ## Compile
 
-> `fable`
+> fable
 
 ## Run
 
-> `npm run start`
+> npm run start

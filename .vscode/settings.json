@@ -4,7 +4,6 @@
         "node_modules/": true,
         "dist": true,
         "temp": true,
-        "app": true,
         "tools": true,
         "src/**/*.map": true,
         "src/**/*.js": true,
