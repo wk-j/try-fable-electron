@@ -1,0 +1,15 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+   "files.exclude": {
+        "node_modules/": true,
+        "dist": true,
+        "temp": true,
+        "app": true,
+        "tools": true,
+        "src/**/*.map": true,
+        "src/**/*.js": true,
+        "build.ps1": true,
+        "build.cmd": true,
+        "build.sh": true
+   }
+}
