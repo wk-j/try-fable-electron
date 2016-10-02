@@ -1,8 +1,9 @@
 var webpack = require("webpack");
+var fs = require("fs")
 
 var progress = new webpack.ProgressPlugin((p, msg) => {
-  console.log(p * 100);
-  console.log(msg);
+  let percentage = `${Math.round(p * 100)}`;
+  fs.writeFileSync("/tmp/webpack-status", percentage)
 });
 
 module.exports = {
