@@ -1,6 +1,6 @@
 ## Try Fable Election
 
-- https://github.com/fable-compiler/fable-electron
+https://github.com/fable-compiler/fable-electron
 
 ## Compile
 

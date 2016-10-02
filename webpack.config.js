@@ -1,3 +1,10 @@
+var webpack = require("webpack");
+
+var progress = new webpack.ProgressPlugin((p, msg) => {
+  console.log(p * 100);
+  console.log(msg);
+});
+
 module.exports = {
   entry: {
     main: "./temp/main",
@@ -23,5 +30,8 @@ module.exports = {
       exclude: /node_modules/,
       test: /\.js$/
     }]
-  }
+  },
+  plugins: [
+    progress
+  ]
 };
