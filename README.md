@@ -10,12 +10,16 @@ https://github.com/fable-compiler/fable-electron
 
 - Fable
 
-    > fable --watch
+> fable --watch
 
 - Webpack
 
-    > webapck --watch
+> webapck --watch
 
 ## Run
 
 > npm run start
+
+## Create installer
+
+> npm run installer

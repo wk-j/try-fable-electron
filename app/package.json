@@ -1,0 +1,8 @@
+{
+  "name": "try-fable-electron",
+  "description": "Try Fable + Electron",
+  "author": "wk-j",
+  "private": true,
+  "version": "0.1.0",
+  "main": "js/main.js"
+}

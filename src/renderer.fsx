@@ -31,12 +31,12 @@ let muiTheme =
 
 type MainState = { isOpen: bool; secret: string }
 
-type Picture(props, ctx) as this =
+type Picture(props, ctx) =
     inherit React.Component<obj, obj>(props, ctx)
 
     member this.render() =
-        R.div [] [
-            R.image [ Src("https://avatars2.githubusercontent.com/u/860704?v=3&s=466")] [unbox "Image"]
+        R.div [ClassName("picture")] [
+            R.image [ Src("https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png")] []
             R.div [] [ R.a [Href("https://google.com")] [unbox "https://google.com"] ]
         ]
 
@@ -49,10 +49,6 @@ type Main(props, ctx) as this =
 
     member this.handleTouchTap() =
          this.setState({isOpen=true; secret="1-2-3-4-5"})
-        // fs.readFile(__dirname + "/data/secret.txt", fun err buffer ->
-        //     if (box err) <> null then
-        //         failwith "Couldn't read file"
-        //     this.setState({isOpen=true; secret=string buffer}))
 
     member this.render() =
         let standardActions =

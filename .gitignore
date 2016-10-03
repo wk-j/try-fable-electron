@@ -3,4 +3,5 @@ app/js
 dist
 tools
 *.map
+*.log
 node_modules

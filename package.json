@@ -1,17 +1,21 @@
 {
+  "name": "try-fable-electron",
+  "description": "Try Fable + Electron",
+  "author": "wk-j",
   "private": true,
+  "version": "0.1.0",
+  "main": "app/js/main.js",
   "scripts": {
     "start": "electron app/js/main.js",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "installer": "build -m"
   },
-  "dependencies": {
+  "devDependencies": {
     "fable-core": "^0.6.3",
     "material-ui": "^0.15.2",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-tap-event-plugin": "^1.0.0"
-  },
-  "devDependencies": {
+    "react-tap-event-plugin": "^1.0.0",
     "bitbar-webpack-progress-plugin": "^0.1.1",
     "electron-prebuilt": "^1.2.5",
     "fable-import-electron": "^0.0.5",
@@ -19,5 +23,25 @@
     "source-map-loader": "^0.1.5",
     "webpack": "^1.13.1",
     "webpack-livereload-plugin": "^0.8.2"
+  },
+  "build": {
+    "appId": "wk.try-fable-electron",
+    "app-category-type": "public.app-category.productivity",
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 220,
+          "type": "file",
+          "path": "computed path to artifact, do not specify it - will be overwritten"
+        }
+      ]
+    }
   }
 }
