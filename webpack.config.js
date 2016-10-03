@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var fs = require("fs")
 
 var BitBar = require("bitbar-webpack-progress-plugin");
+var LiveReloadPlugin = require("webpack-livereload-plugin");
 
 var progress = new webpack.ProgressPlugin((p, msg) => {
   let percentage = `${Math.round(p * 100)}`;
@@ -35,6 +36,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new BitBar()
+    new BitBar(),
+    new LiveReloadPlugin()
   ]
 };

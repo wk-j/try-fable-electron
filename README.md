@@ -8,7 +8,13 @@ https://github.com/fable-compiler/fable-electron
 
 ## Compile with Watch Mode
 
-> fable --watch
+- Fable
+
+    > fable --watch
+
+- Webpack
+
+    > webapck --watch
 
 ## Run
 
