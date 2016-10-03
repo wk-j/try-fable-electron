@@ -15,6 +15,8 @@ let createMainWindow () =
     let options = createEmpty<BrowserWindowOptions>
     options.width <- Some 800.
     options.height <- Some 600.
+    // options.transparent <- Some true
+
     let window = electron.BrowserWindow.Create(options)
 
     // Load the index.html of the app.
@@ -47,6 +49,7 @@ electron.app.on("window-all-closed", unbox(fun () ->
     if Node.``process``.platform <> "darwin" then
         electron.app.quit()
 ))
+
 
 electron.app.on("activate", unbox(fun () ->
     // On OS X it's common to re-create a window in the app when the

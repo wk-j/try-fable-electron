@@ -31,6 +31,15 @@ let muiTheme =
 
 type MainState = { isOpen: bool; secret: string }
 
+type Picture(props, ctx) as this =
+    inherit React.Component<obj, obj>(props, ctx)
+
+    member this.render() =
+        R.div [] [
+            R.image [ Src("https://avatars2.githubusercontent.com/u/860704?v=3&s=466")] [unbox "Image"]
+            R.div [] [ R.a [Href("https://google.com")] [unbox "https://google.com"] ]
+        ]
+
 type Main(props, ctx) as this =
     inherit React.Component<obj,MainState>(props, ctx)
     do this.state <- {isOpen=false; secret=""}
@@ -53,6 +62,7 @@ type Main(props, ctx) as this =
                    "onTouchTap" => this.handleRequestClose] []
         R.from MuiThemeProvider
             !!["muiTheme" => muiTheme] [
+                //R.div [] [ ]
                 R.div [Style [TextAlign "center"
                               PaddingTop 200]] [
                     R.from Dialog
@@ -67,6 +77,9 @@ type Main(props, ctx) as this =
                         !!["label" => "Super Secret Password"
                            "secondary" => true
                            "onTouchTap" => this.handleTouchTap] []
+
+                    // my component
+                    R.com<Picture,_,_> None []
                 ]
             ]
 

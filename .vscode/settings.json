@@ -2,8 +2,8 @@
 {
    "files.exclude": {
         "node_modules/": true,
-        "dist": true,
-        "temp": true,
+        //"dist": true,
+        //"temp": true,
         "tools": true,
         "src/**/*.map": true,
         "src/**/*.js": true,
