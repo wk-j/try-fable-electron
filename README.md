@@ -6,6 +6,10 @@ https://github.com/fable-compiler/fable-electron
 
 > fable
 
+## Compile with Watch Mode
+
+> fable --watch
+
 ## Run
 
 > npm run start
