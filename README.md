@@ -4,22 +4,32 @@ https://github.com/fable-compiler/fable-electron
 
 ## Compile
 
-> fable
+```
+fable
+```
 
 ## Compile with Watch Mode
 
-- Fable
+### Fable
 
-> fable --watch
+```
+fable --watch
+```
 
-- Webpack
+### Webpack
 
-> webapck --watch
+```
+webapck --watch
+```
 
 ## Run
 
-> npm run start
+```
+npm run start
+```
 
 ## Create installer
 
-> npm run installer
+```
+npm run installer
+```
